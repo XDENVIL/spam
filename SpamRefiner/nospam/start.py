@@ -5,7 +5,7 @@ from telethon.tl import functions
 from SpamRefiner.events import register
 from datetime import datetime
 
-PM_START_TEXT = """Hi I'm a SpamRefiner Bot Built in Python Using Telethon For More Use /help"""
+PM_START_TEXT = """Hi I'm a SpamRefiner Bot Built in Python Using Telethon For More Use /help Made by @Denvil_bots"""
 
 @register(pattern="^/start$")
 async def start(event):
@@ -16,7 +16,7 @@ async def start(event):
       buttons=[
         [
           Button.url(
-            "Add To Group  👥", "t.me/SpamRefineRobot?startgroup=true"
+            "Add To Group  👥", "t.me/SpamRefinerRobot?startgroup=true"
             ),
           ],
         ],
@@ -37,7 +37,7 @@ async def help(event):
   else:
     await event.reply(
       "Contact me in PM to get the help menu",
-      buttons=[[Button.url("Help ", "t.me/SpamRefineRobot?start=help")]],
+      buttons=[[Button.url("Help ", "t.me/SpamRefinerRobot?start=help")]],
       )
 
 @register(pattern="^/ping$")
